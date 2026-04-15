@@ -31,7 +31,7 @@
         },
         "@schematics/angular:pipe": {
           "skipTests": true,
-          "path": "src"
+          "path": "src/core/pipes"
         }
       },
       "root": "",
