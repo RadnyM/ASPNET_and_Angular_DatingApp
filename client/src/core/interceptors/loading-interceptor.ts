@@ -10,7 +10,7 @@ export const loadingInterceptor: HttpInterceptorFn = (req, next) => {
 
   const generateCacheKey = (url: string, params: HttpParams): string => {
     const paramString = params.keys().map(key => `${key}=${params.get(key)}`).join('&');
-    return paramString ? `${url}?{paramString}` : url;
+    return paramString ? `${url}?${paramString}` : url;
   }
 
   const cacheKey = generateCacheKey(req.url, req.params);
